@@ -1,0 +1,30 @@
+POST http://localhost:3000/create
+Content-Type: application/json
+
+{
+    "title": "eat",
+    "description": "eat food"
+}
+
+###
+GET http://localhost:3000/task/get?id=1
+
+###
+GET http://localhost:3000/task/get
+
+###
+GET http://localhost:3000/task/delete?id=1
+
+###
+GET http://localhost:3000/task/list?status=incomplete
+
+
+###
+GET http://localhost:3000/task/list?status=incomplete
+
+
+###
+PATCH  http://localhost:3000/tasks/update/complete?id=1
+
+###
+PATCH  http://localhost:3000/tasks/update/incomplete?id=1

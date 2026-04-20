@@ -1,0 +1,4 @@
+node_modules/
+main.py
+database.json
+bun.lock
