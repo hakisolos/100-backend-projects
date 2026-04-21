@@ -1,0 +1,17 @@
+- add note (/notes/add) POST
+- delete note (/notes/delete) DELETE
+- getone by id (/notes/getOne) GET
+- get notes with filter (newest/oldest) (/notes/get?status=) GET
+- update notes (/notes/update) POST
+
+
+SCHEMA:
+- id
+- title
+- body
+- created_at
+- updated_at
+
+
+small to big means oldest to newest (ascending)
+big to small means newest to oldest (decending)

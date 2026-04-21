@@ -1,0 +1,53 @@
+POST http://localhost:3000/notes/add
+Content-Type: application/json
+
+{
+    "title": "fiewnfrew D great",
+    "body": "haki don tire"
+}
+
+###
+GET http://localhost:3000/notes/get?order=newest
+
+###
+GET http://localhost:3000/notes/get?order=oldest
+
+###
+GET http://localhost:3000/notes/get
+
+
+###
+GET http://localhost:3000/notes/getOne?id=a8c45dd015bfdc6635a241c7664840
+
+###
+DELETE  http://localhost:3000/notes/delete?id=6bda3720b0e0ebd5b7aa0cf2fe2574
+
+###
+PATCH  http://localhost:3000/notes/update
+Content-Type: application/json
+
+{   "id": "a8c45dd015bfdc6635a241c7664840",
+    "title": "updated",
+    "body": " don tire"
+}
+
+
+
+###
+PATCH  http://localhost:3000/notes/update
+Content-Type: application/json
+
+{   "id": "a8c45dd015bfdc6635a241c7664840",
+    "body": "he don tire"
+}
+
+
+###
+PATCH  http://localhost:3000/notes/update
+Content-Type: application/json
+
+{   "id": "a8c45dd015bfdc6635a241c7664840",
+    "title": "fek"
+
+}
+
