@@ -1,0 +1,13 @@
+PATCH http://localhost:3000/increment
+
+
+###
+PATCH http://localhost:3000/decrement
+
+
+###
+PATCH http://localhost:3000/reset
+
+
+###
+GET http://localhost:3000/pageviews
