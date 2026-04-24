@@ -1,0 +1,18 @@
+### POST /bookmark/save
+POST http://localhost:3000/bookmark/save
+Content-Type: application/json
+
+{
+  "url": "https://haki.top",
+  "title": "Portfilio",
+  "tags": ["tech", "game"]
+}
+
+### GET /bookmark/
+GET http://localhost:3000/bookmark/?tag=tech
+
+### GET /bookmark/
+GET http://localhost:3000/bookmark/
+
+### DELETE /bookmark/
+DELETE http://localhost:3000/bookmark/?id=test-id
