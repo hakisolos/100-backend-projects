@@ -1,0 +1,67 @@
+@baseUrl = http://localhost:8080
+
+### Add contact 1
+POST {{baseUrl}}/contact/add
+Content-Type: application/json
+
+{
+  "name": "Haki",
+  "email": "haki@example.com",
+  "phone": "08012345678"
+}
+
+### Add contact 2
+POST {{baseUrl}}/contact/add
+Content-Type: application/json
+
+{
+  "name": "John",
+  "email": "john@example.com",
+  "phone": "08123456789"
+}
+
+### Add contact 3
+POST {{baseUrl}}/contact/add
+Content-Type: application/json
+
+{
+  "name": "Jane",
+  "email": "jane@example.com",
+  "phone": "09012345678"
+}
+
+### Bad request - missing JSON body
+POST {{baseUrl}}/contact/add
+Content-Type: application/json
+
+{}
+
+### Get contact by name
+GET {{baseUrl}}/contacts/get?name=Haki
+
+### Get contact by email
+GET {{baseUrl}}/contacts/get?email=haki@example.com
+
+### Get contact by name and email
+GET {{baseUrl}}/contacts/get?name=Haki&email=haki@example.com
+
+### Get contact - missing query params
+GET {{baseUrl}}/contacts/get
+
+### Get contact - not found
+GET {{baseUrl}}/contacts/get?email=unknown@example.com
+
+### Get all contacts - default pagination
+GET {{baseUrl}}/contacts
+
+### Get contacts - page 1 limit 2
+GET {{baseUrl}}/contacts?page=1&limit=2
+
+### Get contacts - page 2 limit 2
+GET {{baseUrl}}/contacts?page=2&limit=2
+
+### Get contacts - invalid page
+GET {{baseUrl}}/contacts?page=0&limit=2
+
+### Get contacts - invalid limit
+GET {{baseUrl}}/contacts?page=1&limit=0
