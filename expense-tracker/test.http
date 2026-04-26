@@ -1,0 +1,9 @@
+post http://localhost:8080/logs/add
+Content-Type: application/json
+
+{
+    "type": "expense",
+    "amount": 2000,
+    "note": "hello world"
+    
+}
