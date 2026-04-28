@@ -1,0 +1,39 @@
+### Create habit
+POST http://localhost:8080/habits
+Content-Type: application/json
+
+{
+  "name": "Read 10 pages"
+}
+
+### Create another habit
+POST http://localhost:8080/habits
+Content-Type: application/json
+
+{
+  "name": "Workout"
+}
+
+### Get all habits
+GET http://localhost:8080/habits
+
+### Complete habit with ID 1 for today
+POST http://localhost:8080/habits/1/complete
+
+### Complete habit with ID 2 for today
+POST http://localhost:8080/habits/2/complete
+
+### Try completing habit 1 again
+POST http://localhost:8080/habits/1/complete
+
+### Get streak for habit 1
+GET http://localhost:8080/habits/1/streak
+
+### Get streak for habit 2
+GET http://localhost:8080/habits/2/streak
+
+### Test invalid habit
+POST http://localhost:8080/habits/999/complete
+
+### Test invalid streak
+GET http://localhost:8080/habits/999/streak
